@@ -1,28 +1,28 @@
 // BANK
-import BankBCA from "../assets/payments/bank-bca.svg";
-import BankMandiri from "../assets/payments/bank-mandiri.svg";
-import BankBNI from "../assets/payments/bank-bni.svg";
-import BankBRI from "../assets/payments/bank-bri.svg";
+import BankBCA from "/assets/payments/bank-bca.svg";
+import BankMandiri from "/assets/payments/bank-mandiri.svg";
+import BankBNI from "/assets/payments/bank-bni.svg";
+import BankBRI from "/assets/payments/bank-bri.svg";
 
 // QRIS
-import QRIS from "../assets/payments/QRIS.svg";
+import QRIS from "/assets/payments/QRIS.svg";
 
 // EWALLET
-import GoPay from "../assets/payments/gopay.svg";
+import GoPay from "/assets/payments/gopay.svg";
 // import OVO from "../assets/payments/ovo.svg";
-import DANA from "../assets/payments/DANA.svg";
-import ShopeePay from "../assets/payments/shopeepay.svg";
+import DANA from "/assets/payments/DANA.svg";
+import ShopeePay from "/assets/payments/shopeepay.svg";
 
 // CARD
-import VisaMasterAmex from "../assets/payments/card-visa-master-amex.svg";
+import VisaMasterAmex from "/assets/payments/card-visa-master-amex.svg";
 
 // PAYPAL
-import PayPal from "../assets/payments/paypal.svg";
+import PayPal from "/assets/payments/paypal.svg";
 
 // CRYPTO
-import BTC from "../assets/payments/crypto-btc.svg";
-import ETH from "../assets/payments/crypto-eth.svg";
-import USDT from "../assets/payments/crypto-usdt.svg";
+import BTC from "/assets/payments/crypto-btc.svg";
+import ETH from "/assets/payments/crypto-eth.svg";
+import USDT from "/assets/payments/crypto-usdt.svg";
 
 // ICON REGISTRY
 export const paymentIcons = {
