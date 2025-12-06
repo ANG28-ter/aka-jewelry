@@ -8,7 +8,7 @@ export default function BraceletSection() {
         {/* Bracelet Video Detail */}
         <div className="bracelet-item bracelet-product">
           <video
-            src="/src/assets/video/closeup/bracelet-2.mp4"
+            src="/assets/video/closeup/bracelet-2.mp4"
             autoPlay
             loop
             muted
@@ -20,7 +20,7 @@ export default function BraceletSection() {
         {/* Model Portrait + Overlay Copy */}
         <div className="bracelet-item bracelet-model with-overlay">
           <img
-            src="/src/assets/img/product/B/BWM8.jpeg"
+            src="/assets/img/product/B/BWM8.jpeg"
             alt="Model wearing bracelet"
           />
 
@@ -40,14 +40,14 @@ export default function BraceletSection() {
         {/* Model Detail Shot */}
         <div className="bracelet-item bracelet-model">
           <img
-            src="/src/assets/img/product/B/BWM6.jpeg"
+            src="/assets/img/product/B/BWM6.jpeg"
             alt="Bracelet detail model shot"
           />
         </div>
         {/* Product Macro Shot */}
         <div className="bracelet-item bracelet-product">
           <img
-            src="/src/assets/img/product/exclusive/B6.jpeg"
+            src="/assets/img/product/exclusive/B6.jpeg"
             alt="Bracelet macro detail"
           />
         </div>

@@ -10,28 +10,28 @@ export default function CollectionsPage() {
       title: "Basic",
       description: "Everyday essentials to elevate your routine.",
       to: "/Basic",
-      image: "/src/assets/img/grid-collection/basic-grid.jpg",
+      image: "/assets/img/grid-collection/basic-grid.jpg",
     },
     {
       key: "exclusive",
       title: "Exclusive",
       description: "Statement pieces with bold character.",
       to: "/Exclusive",
-      image: "/src/assets/img/grid-collection/exclusive-grid.jpg",
+      image: "/assets/img/grid-collection/exclusive-grid.jpg",
     },
     {
       key: "nusantara",
       title: "Nusantara",
       description: "Contemporary silhouettes with cultural roots.",
       to: "/Nusantara",
-      image: "/src/assets/img/grid-collection/nusantara.jpg",
+      image: "/assets/img/grid-collection/nusantara.jpg",
     },
     {
       key: "pearl",
       title: "Pearl",
       description: "Soft luminance and modern elegance.",
       to: "/Pearl",
-      image: "/src/assets/img/grid-collection/pearl-grid-2.jpg",
+      image: "/assets/img/grid-collection/pearl-grid-2.jpg",
     },
   ];
 
@@ -57,7 +57,7 @@ export default function CollectionsPage() {
           </p>
         </div>
         <div className="banner-media">
-          <img src="/src/assets/img/hero/jw9.jpg" alt="Editorial" />
+          <img src="/assets/img/hero/jw9.jpg" alt="Editorial" />
         </div>
       </section>
 
@@ -93,9 +93,9 @@ export default function CollectionsPage() {
 
       {/* FEATURED TRIO */}
       <section className="collections-featured-trio">
-        <img src="/src/assets/img/collections/bracelet-closeup.jpg" />
-        <img src="/src/assets/img/collections/earring-closeup.jpg" />
-        <img src="/src/assets/img/collections/ring-closeup.jpg" />
+        <img src="/assets/img/collections/bracelet-closeup.jpg" />
+        <img src="/assets/img/collections/earring-closeup.jpg" />
+        <img src="/assets/img/collections/ring-closeup.jpg" />
       </section>
 
       {/* SUBINFO */}

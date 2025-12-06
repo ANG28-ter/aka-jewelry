@@ -61,7 +61,7 @@ export default function Navbar() {
       >
         <div className="logo">
           <Link to="/">
-            <img src="/src/assets/icons/logo/logo1.png" alt="brand luxury" />
+            <img src="/assets/icons/logo/logo1.png" alt="brand luxury" />
           </Link>
         </div>
 

@@ -9,7 +9,7 @@ export default function AdEditorialSection() {
         {/* ROW 1 - COL 1 : PRODUCT MACRO */}
         <div className="ad-item ad-product">
           <img
-            src="/src/assets/img/product/Exclusive/4.jpeg"
+            src="/assets/img/product/Exclusive/4.jpeg"
             alt="Signature bracelet detail"
           />
         </div>
@@ -17,7 +17,7 @@ export default function AdEditorialSection() {
         {/* ROW 1 - COL 2 : MODEL PORTRAIT + COPY */}
         <div className="ad-item ad-model with-overlay">
           <img
-            src="/src/assets/img/model/MD18.jpeg"
+            src="/assets/img/model/MD18.jpeg"
             alt="Model wearing earrings"
           />
           <div className="ad-overlay">
@@ -36,7 +36,7 @@ export default function AdEditorialSection() {
         {/* ROW 2 - COL 1 : MODEL PORTRAIT (detail) */}
         <div className="ad-item ad-model">
           <img
-            src="/src/assets/img/model/model-ring.jpg"
+            src="/assets/img/model/model-ring.jpg"
             alt="Model detail shot"
           />
         </div>
@@ -44,7 +44,7 @@ export default function AdEditorialSection() {
         {/* ROW 2 - COL 2 : PRODUCT MACRO */}
         <div className="ad-item ad-product">
           <video
-            src="/src/assets/video/closeup/exclusive-1.mp4"
+            src="/assets/video/closeup/exclusive-1.mp4"
             autoPlay
             loop
             muted

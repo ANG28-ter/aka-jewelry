@@ -9,8 +9,8 @@ export default function EarSection() {
   const gridItems = earrings.slice(1); // produk untuk magazine (hanya ini yang clickable)
 
   // editorial images khusus model (tidak menuju link)
-  const modelMain = "/src/assets/img/model/model-earing-1.jpg"; // close-up wajah
-  const modelSide = "/src/assets/img/model/EWM7.jpeg"; // portrait BW / samping
+  const modelMain = "/assets/img/model/model-earing-1.jpg"; // close-up wajah
+  const modelSide = "/assets/img/model/EWM7.jpeg"; // portrait BW / samping
 
   const productTop = gridItems[0];
   const productBottom = gridItems[1];
@@ -22,7 +22,7 @@ export default function EarSection() {
         {/* LEFT: VIDEO */}
         <div className="ear-hero-panel left">
           <video
-            src="/src/assets/video/closeup/model-with-earing.mp4"
+            src="/assets/video/closeup/model-with-earing.mp4"
             autoPlay
             muted
             loop

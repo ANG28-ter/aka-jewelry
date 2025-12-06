@@ -11,13 +11,13 @@ const heroSlides = [
   },
   {
     id: 2,
-    img: "/src/assets/img/hero/jw12.jpeg",
+    img: "/assets/img/hero/jw12.jpeg",
     title: "Timeless Luxury",
     desc: "Shine with confidence and class.",
   },
   {
     id: 3,
-    img: "/src/assets/img/hero/B2.jpg",
+    img: "/assets/img/hero/B2.jpg",
     title: "Wear Your Story",
     desc: "Each piece speaks your personality.",
   },

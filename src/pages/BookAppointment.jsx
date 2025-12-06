@@ -211,7 +211,7 @@ export default function BookAppointment() {
 
         <img
           className="booking-img"
-          src="/src/assets/img/model/MD21.jpg"
+          src="/assets/img/model/MD21.jpg"
           alt="Showroom"
         />
       </section>

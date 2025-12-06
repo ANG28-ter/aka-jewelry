@@ -7,7 +7,7 @@ export default function AdEditorialSection2() {
         {/* ROW 1 - COL 2 : MODEL PORTRAIT + COPY */}
         <div className="ad-item-2 ad-model-2 with-overlay-2">
           <img
-            src="/src/assets/img/model/model-ring-2.jpg"
+            src="/assets/img/model/model-ring-2.jpg"
             alt="Model wearing rings"
           />
           <div className="ad-overlay-2">
@@ -29,7 +29,7 @@ export default function AdEditorialSection2() {
         {/* ROW 2 - COL 2 : PRODUCT MACRO */}
         <div className="ad-item-2 ad-product-2">
           <video
-            src="/src/assets/video/closeup/ring-exclusive-1.mp4"
+            src="/assets/video/closeup/ring-exclusive-1.mp4"
             autoPlay
             loop
             muted
