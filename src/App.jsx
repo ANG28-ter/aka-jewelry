@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 // ==== Pages ====
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import Basic from "./pages/Basic";
 import Exclusive from "./pages/Exclusive";
 import Nusantara from "./pages/Nusantara";
