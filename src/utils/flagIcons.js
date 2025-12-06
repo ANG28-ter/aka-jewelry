@@ -1,5 +1,5 @@
 // Scan semua SVG di folder flags
-const modules = import.meta.glob("../assets/flags/*.svg", { eager: true });
+const modules = import.meta.glob("/assets/flags/*.svg", { eager: true });
 
 // Hasil objek akhir
 export const flagIcons = {};
