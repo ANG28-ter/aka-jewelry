@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import "../../styles/model.css";
 
 const modelPhotos = [
-  "/src/assets/img/model/MD15.jpeg",
-  "/src/assets/img/model/MD16.jpeg",
-  "/src/assets/img/model/MD14.jpeg",
+  "/assets/img/model/MD15.jpeg",
+  "/assets/img/model/MD16.jpeg",
+  "/assets/img/model/MD14.jpeg",
 ];
 
 export default function ModelSlider() {
