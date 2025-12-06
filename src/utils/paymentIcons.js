@@ -37,7 +37,7 @@ export const paymentIcons = {
 
   // EWALLET
   gopay: GoPay,
-//   ovo: OVO,
+  //   ovo: OVO,
   dana: DANA,
   shopeepay: ShopeePay,
 
