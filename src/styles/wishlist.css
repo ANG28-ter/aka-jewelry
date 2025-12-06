@@ -1,0 +1,222 @@
+/* =============================================================
+   BACKDROP — Cinematic Blur
+============================================================= */
+.wish-backdrop {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(10px) brightness(0.75);
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 300;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* =============================================================
+   SIDE PANEL — Luxury Dark Gold
+============================================================= */
+.wish-panel.premium {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 100vh;
+
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.02) 40%
+    ),
+    #0d0d0f;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+
+  padding: 26px;
+  overflow-y: auto;
+
+  box-shadow: -8px 0 50px rgba(0, 0, 0, 0.5);
+  animation: slideInLuxury 0.35s ease forwards;
+}
+
+.wish-panel {
+  position: relative;
+  pointer-events: auto;
+  z-index: 99999;
+}
+
+@keyframes slideInLuxury {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =============================================================
+   HEADER
+============================================================= */
+.wish-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  z-index: 11000;
+}
+
+.wish-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #f5f5f5;
+}
+
+/* Close Button */
+
+.wish-close,
+.glass-btn {
+  position: relative;
+  z-index: 21000; /* HIGHER than any gradient/blur */
+  pointer-events: auto;
+  isolation: isolate;
+}
+
+.glass-btn {
+  .wish-close {
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.glass-btn:hover {
+  background: var(--gold);
+  color: #111;
+  border-color: #000;
+}
+
+/* =============================================================
+   LIST
+============================================================= */
+.wish-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Item */
+
+.wish-click-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  text-decoration: none;
+}
+
+.wish-click-area h4,
+.wish-click-area p {
+  color: inherit;
+}
+
+.wish-item.luxury {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  transition: 0.25s ease;
+}
+
+.wish-item.luxury:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Image Wrap */
+.wish-img-wrap {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  background: #111;
+  flex-shrink: 0;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+.wish-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text */
+.wish-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fafafa;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+.wish-price {
+  font-size: 0.92rem;
+  color: var(--gold);
+  margin-top: 2px;
+}
+
+/* Remove Button */
+.wish-remove-icon {
+  margin-left: auto;
+  background: none;
+  border: none;
+
+  color: #aaa;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.wish-remove-icon:hover {
+  color: var(--gold);
+}
+
+/* ===== EMPTY ===== */
+.wish-empty {
+  text-align: center;
+  color: #999;
+  margin-top: 60px;
+  font-size: 0.95rem;
+}

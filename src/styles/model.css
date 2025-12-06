@@ -1,0 +1,148 @@
+/* =====================================
+   SECTION
+===================================== */
+.model-section {
+  text-align: center;
+  /* padding: 60px 0; */
+}
+
+.model-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.9rem, 2.6vw, 2.8rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fafafa;
+  margin-bottom: 10px;
+}
+
+.model-sub {
+  font-size: 1rem;
+  color: #d1d5db;
+  margin-bottom: 40px;
+  letter-spacing: 0.04em;
+}
+
+/* =====================================
+   SLIDER WRAPPER
+===================================== */
+.model-slider {
+  position: relative;
+  width: 100%;
+  /* max-width: 90%; */
+  margin: auto;
+  overflow: hidden;
+}
+
+.model-slider-inner {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+/* =====================================
+   IMAGE FADE + SLIDE + DEPTH
+===================================== */
+.model-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transform: scale(1.05) translateX(20px);
+  transition: opacity 800ms ease, transform 900ms ease;
+}
+
+.model-img.active {
+  opacity: 1;
+  transform: scale(1) translateX(0px);
+  z-index: 3;
+}
+
+/* =====================================
+   GRADIENT OVERLAY
+===================================== */
+.model-grad-left,
+.model-grad-right {
+  position: absolute;
+  top: 0;
+  width: 18%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.model-grad-left {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.model-grad-right {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.6), transparent);
+}
+
+/* =====================================
+   ARROWS
+===================================== */
+.model-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  width: 50px;
+  height: 50px;
+  /* border-radius: 50%; */
+  border: none;
+  background: transparent;
+
+  color: #fafafa;
+  font-size: 2rem;
+  line-height: 0;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.model-arrow:hover {
+  background: var(--gold);
+  color: #111;
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.model-arrow.left {
+  left: 20px;
+}
+
+.model-arrow.right {
+  right: 20px;
+}
+
+/* =====================================
+   DOT NAVIGATION
+===================================== */
+.model-dots {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 5;
+}
+
+.model-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.model-dots .dot.active {
+  width: 24px;
+  border-radius: 12px;
+  background: var(--gold);
+}

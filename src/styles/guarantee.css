@@ -1,0 +1,111 @@
+/* ===================================================
+   GUARANTEE — MINIMALIST LUXURY RECTANGULAR STYLE
+=================================================== */
+
+.guarantee-section {
+  padding: 110px 20px;
+  background: var(--dark); /* clean, deep */
+}
+
+.guarantee-container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.guarantee-tag {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--gold-soft);
+  margin-bottom: 14px;
+}
+
+.guarantee-title {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--text-light);
+  line-height: 1.2;
+  margin-bottom: 60px;
+}
+
+.guarantee-title span {
+  color: var(--gold);
+  display: block;
+}
+
+/* GRID — rectangular clean layout */
+.guarantee-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* CARD — FLAT RECTANGLE, NO DRAMA */
+.guarantee-card {
+  background: var(--dark-raised);
+  border: 1px solid var(--border-light);
+  padding: 34px 28px 38px;
+
+  text-align: left;
+
+  /* Clean minimal hover */
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.guarantee-card:hover {
+  border-color: var(--border-gold);
+  background: var(--dark-soft);
+}
+
+/* ICON — minimal framed, no glow */
+.guarantee-icon {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.guarantee-card h3 {
+  font-size: 1.08rem;
+  margin-bottom: 5px;
+  color: var(--text-light);
+  font-weight: 600;
+  text-align: center;
+}
+
+.guarantee-card p {
+  color: var(--text-muted);
+  line-height: 1.45;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Fade minimal */
+.fade-trust {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeTrust 0.65s ease-out forwards;
+}
+
+.fade-trust:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.fade-trust:nth-child(2) {
+  animation-delay: 0.18s;
+}
+.fade-trust:nth-child(3) {
+  animation-delay: 0.26s;
+}
+.fade-trust:nth-child(4) {
+  animation-delay: 0.34s;
+}
+
+@keyframes fadeTrust {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

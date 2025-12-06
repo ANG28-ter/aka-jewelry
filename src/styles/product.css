@@ -1,0 +1,278 @@
+/* ================================
+   PRODUCT GRID — DARK GOLD LUXURY
+   ================================ */
+
+.product-grid-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 90px 24px 40px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 34px;
+  font-family: var(--font-title);
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.6px;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+/* =====================
+   PRODUCT CARD STYLING
+   ===================== */
+.product-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.55);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* =========================
+   IMAGE — CENTER & COVER FIX
+   ========================= */
+.product-img {
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* full cover premium */
+  object-position: center;
+  transition: transform 0.45s ease;
+}
+
+/* Smooth hover movement tanpa nutup icon */
+.product-card:hover .product-img img {
+  transform: scale(1.07);
+}
+
+/* =====================
+   TEXT INFO
+   ===================== */
+.product-info {
+  padding: 1rem 1.25rem 1.4rem;
+  text-align: left;
+}
+
+.product-info h3 {
+  font-family: var(--font-title);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #f3f4f6;
+  margin-bottom: 0.45rem;
+}
+
+.product-price {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+.product-card .desc {
+  margin-top: 0.65rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #aeb1b8;
+}
+
+/* ==========================
+   WISHLIST ICON (Final Fix)
+   ========================== */
+.wish-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  z-index: 10;
+  pointer-events: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--text-light);
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+/* Hover — tidak hilang saat image scale */
+.product-card:hover .wish-icon {
+  transform: scale(1.1);
+}
+.wish-icon.active {
+  background: var(--gold);
+  color: #111;
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.wish-pop {
+  animation: wishPop 0.55s ease forwards;
+}
+
+@keyframes wishPop {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.35);
+  }
+  45% {
+    transform: scale(0.88);
+  }
+  70% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.wish-icon.active::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 120, 0.45),
+    rgba(255, 215, 120, 0) 70%
+  );
+  opacity: 0;
+  animation: wishSparkle 0.6s ease-out forwards;
+}
+
+@keyframes wishSparkle {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.9);
+  }
+}
+
+.heart-icon {
+  z-index: 5;
+  pointer-events: none; /* agar klik tetap di button, bukan di ikon */
+}
+
+.slide-right {
+  animation: slideRight 0.45s ease forwards;
+}
+
+.slide-left {
+  animation: slideLeft 0.45s ease forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+/* PAGINATION — CLEAN UNDERLINE STYLE */
+.pagination-dots {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.pagination-arrow {
+  background: transparent;
+  border: none;
+  color: #bbb;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 4px 8px;
+  transition: 0.25s;
+}
+
+.pagination-arrow:hover {
+  color: var(--gold);
+}
+
+.pagination-number {
+  background: transparent;
+  border: none;
+  color: #bbb;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 2px 4px;
+  position: relative;
+  transition: 0.25s;
+}
+
+.pagination-number:hover {
+  color: var(--gold-soft);
+}
+
+.pagination-number.active {
+  color: var(--gold);
+}
+
+.pagination-number.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 2px;
+}

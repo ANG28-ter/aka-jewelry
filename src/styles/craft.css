@@ -1,0 +1,139 @@
+/* ============================================
+   CRAFT SECTION — DARK GOLD PREMIUM STYLING
+============================================ */
+
+.craft-section {
+  padding: 110px 20px;
+  background: var(--dark-raised); /* slightly brighter than dark */
+  position: relative;
+}
+
+.craft-container {
+  max-width: 1180px;
+  margin: auto;
+  text-align: center;
+}
+
+/* TAG SMALL */
+.craft-tag {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--gold-soft);
+  margin-bottom: 18px;
+  opacity: 0.85;
+}
+
+/* TITLE */
+.craft-title {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--text-light);
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+
+.craft-title span {
+  display: block;
+  color: var(--gold);
+}
+
+/* SUBTEXT */
+.craft-sub {
+  max-width: 640px;
+  margin: 20px auto 70px;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+/* GRID */
+.craft-grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* CARD */
+.craft-card {
+  background: var(--dark-soft);
+  padding: 34px 28px 42px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  text-align: left;
+  position: relative;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+/* NUM */
+.craft-num {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--gold);
+  opacity: 0.85;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+/* TITLE */
+.craft-card h3 {
+  font-size: 1.18rem;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+/* DESC */
+.craft-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* GOLD ACCENT */
+.craft-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--gold);
+  transition: var(--transition);
+}
+
+.craft-card:hover::before {
+  width: 100%;
+}
+
+/* HOVER EFFECT */
+.craft-card:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-4px);
+}
+
+/* Fade-up animation */
+.fade-step {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: fadeStep 0.8s ease forwards;
+}
+
+.fade-step:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.fade-step:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.fade-step:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.fade-step:nth-child(4) {
+  animation-delay: 0.55s;
+}
+
+@keyframes fadeStep {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,217 @@
+/* =======================================================
+   ✦ CINEMATIC MATTE LUXURY — GOLD DUST EDITION ✦
+   Selaras penuh dengan global dark gold theme
+======================================================= */
+
+.promo-section {
+  width: 100%;
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--dark); /* match global theme */
+}
+
+/* Subtle gold dust — matte, not shiny */
+.promo-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+      circle at 25% 35%,
+      rgba(212, 175, 55, 0.06),
+      transparent 70%
+    ),
+    radial-gradient(
+      circle at 75% 65%,
+      rgba(212, 175, 55, 0.04),
+      transparent 75%
+    );
+
+  opacity: 0.45;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+
+  animation: dustDrift 18s ease-in-out infinite;
+}
+
+@keyframes dustDrift {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-8px) translateX(4px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* MAIN BOX — Matte, deep, luxury */
+.promo-box {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    /* Diamond halo (cool tone, subtle white glow) */ radial-gradient(
+      circle at 45% 15%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 58%
+    ),
+    /* Black diamond facet glints (cold white micro-reflections) */
+      linear-gradient(125deg, rgba(255, 255, 255, 0.05) 8%, transparent 12%),
+    linear-gradient(305deg, rgba(255, 255, 255, 0.04) 10%, transparent 15%),
+    /* Deep Noir Base */ var(--dark-soft);
+
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 70px 80px;
+  width: min(900px, 92%);
+  text-align: center;
+
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.75),
+    inset 0 0 25px rgba(255, 255, 255, 0.02); /* diamond depth */
+
+  transform: translateY(30px);
+  opacity: 0;
+  animation: promoFadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes promoFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shimmer but matte — subtle highlight sweep */
+.promo-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+      circle at 30% 70%,
+      rgba(255, 255, 255, 0.05),
+      transparent 65%
+    ),
+    radial-gradient(
+      circle at 80% 35%,
+      rgba(255, 255, 255, 0.04),
+      transparent 75%
+    );
+
+  opacity: 0.22;
+  pointer-events: none;
+
+  animation: diamondDustFloat 15s ease-in-out infinite;
+}
+
+@keyframes diamondDustFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* SHIMMER SWEEP — now contained within promo-box only */
+.promo-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.14) 45%,
+    transparent 90%
+  );
+
+  opacity: 0;
+  transform: translateX(-130%);
+  pointer-events: none;
+
+  animation: blackDiamondSweep 6.5s ease-in-out infinite;
+}
+
+@keyframes blackDiamondSweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-130%);
+  }
+  40% {
+    opacity: 0.22;
+  }
+  65% {
+    opacity: 0.12;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(130%);
+  }
+}
+
+/* TITLE — refined luxury */
+.promo-box h3 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+
+  color: var(--text-light);
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+
+  margin-bottom: 14px;
+}
+
+/* DESCRIPTION */
+.promo-box p {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+
+/* BUTTON — Matte gold */
+.promo-btn {
+  display: inline-block;
+  padding: 13px 30px;
+
+  border-radius: var(--radius);
+  font-weight: 600;
+
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%);
+  color: #000;
+
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  transition: 0.3s ease;
+}
+
+.promo-btn:hover {
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(212, 175, 55, 0.35);
+  color: #111;
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .promo-box {
+    padding: 48px 28px;
+  }
+  .promo-box h3 {
+    font-size: 24px;
+  }
+  .promo-box p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,533 @@
+/* ===========================================
+   PREMIUM CHECKOUT PAGE — LUXURY DARK / GOLD
+   =========================================== */
+
+.checkout-page {
+  padding: 90px 7%;
+  background: var(--border-light);
+  color: var(--text-light);
+}
+
+/* --- MAIN LAYOUT --- */
+.checkout-container {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.checkout-left {
+  flex: 1.25;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.checkout-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.6px;
+}
+
+/* CARD BASE (glassy minimal premium) */
+.co-card,
+.co-summary-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 26px;
+  /* border-radius: 16px; */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease;
+}
+
+.co-section-title {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  color: var(--gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- INPUT FIELD --- */
+.co-input {
+  width: 100%;
+  padding: 13px 15px;
+  /* border-radius: 12px; */
+  background: var(--bg-input);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  margin-bottom: 14px;
+  transition: 0.25s ease;
+  font-size: 0.95rem;
+}
+
+.co-input:focus {
+  color: #fff;
+}
+
+/* WRAPPER PHONE FIELD */
+.co-phone-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-input);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 10px;
+  /* border-radius: 12px; */
+  margin-bottom: 12px;
+}
+
+/* BUTTON NEGARA */
+.co-phone-country {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 4px 6px;
+  /* border-radius: 8px; */
+}
+
+.co-phone-country:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* FLAG & DIAL */
+.co-flag {
+  font-size: 1.1rem;
+}
+
+.co-flag-svg {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+}
+
+.co-dial {
+  font-size: 0.9rem;
+  font-weight: 600;
+  /* color: var(--gold); */
+}
+
+.co-flag-arrow {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  transition: transform 0.25s ease;
+}
+
+.co-flag-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* INPUT TEL */
+.co-phone-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+/* DROPDOWN NEGARA */
+.co-country-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  z-index: 20;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* border-radius: 12px; */
+  padding: 6px;
+  width: 25%;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.co-country-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  /* border-radius: 8px; */
+  font-size: 0.85rem;
+}
+
+.co-country-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.co-country-name {
+  flex: 1;
+}
+
+.co-country-dial {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+/* GRID */
+.co-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+/* --- PAYMENT GROUP --- */
+.co-pay-group {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 12px;
+}
+
+.co-pay-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+/* DOT */
+.co-dot {
+  width: 10px;
+  height: 10px;
+  /* border-radius: 50%; */
+  background: rgba(255, 255, 255, 0.25);
+  transition: 0.3s ease;
+}
+
+.co-dot.active {
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(214, 178, 92, 0.6);
+}
+
+/* TITLE */
+.co-pay-group-title {
+  color: var(--gold);
+  font-size: 1rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+/* ARROW */
+.co-arrow {
+  transition: 0.35s ease;
+  opacity: 0.75;
+}
+
+.co-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* COLLAPSE CONTENT */
+.co-pay-content {
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+/* PAYMENT OPTION BUTTON */
+.co-pay-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 10px;
+  /* border-radius: 14px; */
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* border: none; */
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  color: var(--text-light);
+}
+
+.co-pay-option:hover {
+  background-color: var(--border-light);
+  border: 1px solid;
+}
+
+.co-pay-option.selected {
+  border-color: 1px solid;
+  background: var(--bg-card);
+}
+
+/* ICON */
+.co-pay-icon-wrap img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: brightness(1.25);
+}
+
+/* BUTTON */
+.co-submit {
+  margin-top: 8px;
+  background: var(--gold);
+  border: none;
+  color: black;
+  padding: 15px;
+  /* border-radius: 12px; */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: 0.25s ease;
+}
+
+.co-submit:hover {
+  filter: brightness(0.92);
+}
+
+/* RIGHT SIDE */
+.checkout-right {
+  flex: 0.75;
+}
+
+.co-product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.co-product-img {
+  width: 82px;
+  /* border-radius: 12px; */
+}
+
+.co-product-info {
+  flex: 1;
+}
+
+.co-product-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.co-product-sub {
+  color: var(--text-light);
+  opacity: 0.7;
+  font-size: 0.87rem;
+}
+
+.co-product-qty {
+  font-size: 0.87rem;
+  opacity: 0.8;
+}
+
+.co-product-price {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* PRICE LINES */
+.co-line,
+.co-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.co-total {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-top: 18px;
+}
+
+.co-legal-text {
+  font-size: 12px;
+  color: #fff;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.co-legal-link {
+  color: #0070f3;
+  text-decoration: underline;
+}
+
+.co-legal-link:hover {
+  opacity: 0.7;
+}
+
+/* =========================================================
+   RESPONSIVE — LARGE TABLET (≤ 1200px)
+========================================================= */
+@media (max-width: 1200px) {
+  .checkout-page {
+    padding: 70px 5%;
+  }
+
+  .checkout-container {
+    gap: 40px;
+  }
+
+  .checkout-left {
+    gap: 26px;
+  }
+
+  .co-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET PORTRAIT (≤ 992px)
+========================================================= */
+@media (max-width: 992px) {
+  .checkout-container {
+    gap: 32px;
+  }
+
+  .checkout-right {
+    flex: 1;
+  }
+
+  .checkout-title {
+    font-size: 2rem;
+  }
+
+  .co-card,
+  .co-summary-card {
+    padding: 22px;
+  }
+
+  .co-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .co-product-img {
+    width: 70px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE (≤ 768px)
+========================================================= */
+@media (max-width: 768px) {
+  .checkout-page {
+    padding: 50px 4%;
+  }
+
+  /* Collapse layout */
+  .checkout-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .checkout-left,
+  .checkout-right {
+    width: 100%;
+  }
+
+  /* Title scale */
+  .checkout-title {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  /* Cards */
+  .co-card,
+  .co-summary-card {
+    padding: 20px;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.32);
+  }
+
+  /* Grid */
+  .co-grid-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .co-product {
+    gap: 14px;
+  }
+
+  .co-product-img {
+    width: 72px;
+  }
+
+  /* Payment options full width */
+  .co-pay-option {
+    padding: 12px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE (≤ 480px)
+========================================================= */
+@media (max-width: 480px) {
+  .checkout-page {
+    padding: 40px 3%;
+  }
+
+  .checkout-right {
+    order: -1;
+  }
+  .checkout-left {
+    order: 1;
+  }
+
+  .checkout-title {
+    font-size: 1.55rem;
+  }
+
+  /* Inputs smaller */
+  .co-input,
+  .co-phone-input {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  /* Phone field refine */
+  .co-phone-field {
+    padding: 6px 10px;
+    gap: 8px;
+  }
+
+  .co-country-dropdown {
+    width: 60%;
+  }
+
+  /* Cards */
+  .co-card,
+  .co-summary-card {
+    padding: 18px;
+  }
+
+  /* Summary product */
+  .co-product-img {
+    width: 64px;
+  }
+
+  .co-product-name {
+    font-size: 0.95rem;
+  }
+
+  .co-product-sub,
+  .co-product-price,
+  .co-product-qty {
+    font-size: 0.82rem;
+  }
+
+  /* Buttons */
+  .co-submit {
+    padding: 13px;
+    font-size: 0.95rem;
+  }
+}

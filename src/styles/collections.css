@@ -1,0 +1,116 @@
+/* ==========================================================
+   COLLECTIONS — BLACK DIAMOND PREMIUM (Editorial Upgrade)
+========================================================== */
+
+.collections-section {
+  width: 100%;
+  margin: auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.collections-section .section-title {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  color: var(--text-light);
+  margin-bottom: 46px;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+
+/* GRID — editorial spacing */
+.collections-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* CARD — minimal, matte, premium */
+.collection-card {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  cursor: pointer;
+
+  background: var(--dark-soft);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+
+  transition: 0.55s cubic-bezier(0.3, 0.1, 0.3, 1);
+}
+
+/* HOVER — subtle luxury movement */
+.collection-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-gold);
+}
+
+/* IMAGE BACKGROUND */
+.collection-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+
+  filter: brightness(0.88) saturate(1.05);
+  transition: 0.6s cubic-bezier(0.3, 0.1, 0.3, 1);
+}
+
+/* HOVER IMAGE — cinematic */
+.collection-card:hover .collection-bg {
+  filter: brightness(0.65) saturate(1.1);
+  transform: scale(1.045); /* kecil saja → high-end */
+}
+
+/* OVERLAY — soft gradient */
+.collection-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* TEXT */
+.collection-info {
+  position: absolute;
+  bottom: 26px;
+  left: 26px;
+  right: 26px;
+  color: var(--text-light);
+  text-align: left;
+
+  transform: translateY(6px);
+  transition: 0.45s ease;
+  opacity: 0.92;
+}
+
+.collection-card:hover .collection-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* TITLE */
+.collection-info h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* SUBTEXT */
+.collection-sub {
+  margin-top: 6px;
+  display: inline-block;
+
+  font-size: 13px;
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translateY(6px);
+
+  transition: 0.5s cubic-bezier(0.3, 0.1, 0.3, 1);
+}
+
+.collection-card:hover .collection-sub {
+  opacity: 1;
+  transform: translateY(0);
+}

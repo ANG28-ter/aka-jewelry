@@ -1,0 +1,132 @@
+/* =====================================================
+   DARK GOLD THEME — LUXURY FOUNDATION (Refactored Clean)
+===================================================== */
+
+/* ---------- COLOR SYSTEM ---------- */
+:root {
+  /* Gold Range */
+  --gold: #d4af37;
+  --gold-soft: #c19d34;
+  --gold-faded: #8b7530;
+
+  /* Dark Scale */
+  --dark: #0a0a0b;
+  --dark-raised: #151515;
+  --dark-soft: #1d1d20;
+
+  /* Text */
+  --text-light: #f5f5f5;
+  --text-muted: #a9a9a9;
+
+  /* UI Base */
+  --bg-card: #141414;
+  --border-light: rgba(255, 255, 255, 0.07);
+  --border-gold: rgba(212, 175, 55, 0.32);
+
+  /* Radius & Motion */
+  --radius: 14px;
+  --transition: 0.28s ease;
+
+  /* Fonts */
+  /* --font-title: "Inter", sans-serif; */
+  --font-body: "Inter", sans-serif;
+
+  /* Responsive Typography */
+  --fs-xl: clamp(2.4rem, 4.5vw, 4rem);
+  --fs-lg: clamp(1.6rem, 3.5vw, 2.5rem);
+  --fs-md: clamp(1rem, 2vw, 1.25rem);
+  --fs-sm: clamp(0.87rem, 1.5vw, 1rem);
+}
+
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+}
+
+body {
+  width: 100%;
+  background: var(--dark);
+  color: var(--text-light);
+  letter-spacing: 0.15px;
+  overflow-x: hidden;
+}
+
+/* ---------- LUXURY TYPOGRAPHY ---------- */
+.lux-title {
+  font-family: var(--font-title);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.6px;
+}
+
+/* ---------- MEDIA & ELEMENT CLEAN ---------- */
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--gold-soft);
+}
+
+img {
+  user-select: none;
+  display: block;
+}
+
+/* ---------- SCROLLBAR GOLD TOUCH ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 5px;
+}
+
+/* ---------- UI COMPONENT STANDARD ---------- */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.card:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-2px);
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: var(--transition);
+}
+
+/* Gold Button */
+.btn-gold {
+  background: var(--gold);
+  color: #000;
+  box-shadow: 0 3px 12px rgba(212, 175, 55, 0.25);
+}
+.btn-gold:hover {
+  background: var(--gold-soft);
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.35);
+}
+
+/* Outline */
+.btn-outline-gold {
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+}
+.btn-outline-gold:hover {
+  background: var(--gold);
+  color: #000;
+}
