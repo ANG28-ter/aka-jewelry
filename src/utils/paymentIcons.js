@@ -5,12 +5,12 @@ import BankBNI from "../assets/payments/bank-bni.svg";
 import BankBRI from "../assets/payments/bank-bri.svg";
 
 // QRIS
-import QRIS from "../assets/payments/qris.svg";
+import QRIS from "../assets/payments/QRIS.svg";
 
 // EWALLET
 import GoPay from "../assets/payments/gopay.svg";
 // import OVO from "../assets/payments/ovo.svg";
-import DANA from "../assets/payments/dana.svg";
+import DANA from "../assets/payments/DANA.svg";
 import ShopeePay from "../assets/payments/shopeepay.svg";
 
 // CARD
