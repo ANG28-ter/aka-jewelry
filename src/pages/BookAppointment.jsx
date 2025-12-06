@@ -1,8 +1,8 @@
 import { useState, useMemo } from "react";
 import "../styles/book.css";
 import { CalendarDays, Clock, User, Mail, Phone, Check } from "lucide-react";
-import Navbar from "../components/layout/navbar";
-import Footer from "../components/layout/footer";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 export default function BookAppointment() {
   const [step, setStep] = useState(1);
@@ -162,7 +162,7 @@ export default function BookAppointment() {
 
   return (
     <main className="booking-wrapper">
-        <Navbar/>
+      <Navbar />
       {/* LEFT */}
       <section className="booking-left">
         <h1>Visit Our Showroom</h1>
@@ -209,7 +209,11 @@ export default function BookAppointment() {
           </button>
         </div>
 
-        <img className="booking-img" src="/src/assets/img/model/MD21.jpg" alt="Showroom" />
+        <img
+          className="booking-img"
+          src="/src/assets/img/model/MD21.jpg"
+          alt="Showroom"
+        />
       </section>
 
       {/* RIGHT PANEL */}

@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import "../styles/basicpage.css";
 import { basicCollections } from "../data/basiccollections";
 
-import Navbar from "../components/layout/navbar";
-import Footer from "../components/layout/footer";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 export default function BasicPage() {
   const items = basicCollections;
 
   return (
     <main className="basic-page">
-        <Navbar />
+      <Navbar />
       {/* ===== HERO ===== */}
       <section className="basic-hero">
         <h1>Basic Collection</h1>
@@ -64,7 +64,7 @@ export default function BasicPage() {
           <p>Siluet bersih dan modern untuk gaya apa pun.</p>
         </div>
       </section>
-        <Footer />
+      <Footer />
     </main>
   );
 }

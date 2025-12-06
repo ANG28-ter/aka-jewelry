@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import "../styles/exclusivepage.css";
 import { exclusiveCollections } from "../data/exclusivecollections";
 
-import Navbar from "../components/layout/navbar";
-import Footer from "../components/layout/footer";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 export default function ExclusivePage() {
   const items = exclusiveCollections;

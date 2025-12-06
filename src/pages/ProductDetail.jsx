@@ -7,8 +7,8 @@ import { exclusiveCollections } from "../data/exclusivecollections";
 import { pearlCollections } from "../data/pearlcollections";
 import { nusantaraCollections } from "../data/nusantaracollections";
 
-import Navbar from "../components/layout/navbar";
-import Footer from "../components/layout/footer";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 import "../styles/productdetail.css";
 

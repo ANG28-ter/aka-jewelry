@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import "../styles/pearlpage.css";
 import { pearlCollections } from "../data/pearlcollections";
 
-import Navbar from "../components/layout/navbar";
-import Footer from "../components/layout/footer";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 export default function PearlPage() {
   const items = pearlCollections;
 
   return (
     <main className="pearl-page">
-        <Navbar />
+      <Navbar />
       <section className="pearl-hero">
         <h1>Pearl Collection</h1>
         <p>
@@ -35,7 +35,7 @@ export default function PearlPage() {
           </Link>
         ))}
       </section>
-        <Footer />
+      <Footer />
     </main>
   );
 }

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/collectionspage.css";
-import Navbar from "../components/layout/navbar";
-import Footer from "../components/layout/footer";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 export default function CollectionsPage() {
   const collections = [
@@ -37,7 +37,6 @@ export default function CollectionsPage() {
 
   return (
     <main className="collections-page">
-
       <Navbar />
       {/* HERO */}
       <section className="collections-hero">
