@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const heroSlides = [
   {
     id: 1,
-    img: "/src/assets/img/hero/jw7.jpeg", // ganti dengan asset lo
+    img: "/public/assets/img/hero/jw7.jpeg", // ganti dengan asset lo
     title: "Redefine Your Beauty",
     desc: "Exclusive jewelry crafted for elegance.",
   },
