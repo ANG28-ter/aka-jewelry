@@ -295,6 +295,13 @@
     animation: mobileSlideDown 0.35s ease forwards;
   }
 
+.search-dropdown {
+  position: absolute;
+  top: 75px;
+  right: -150px;
+  width: 55vw;
+}
+
   @keyframes mobileSlideDown {
     from {
       transform: translateY(-12px);
