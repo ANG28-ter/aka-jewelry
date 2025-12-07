@@ -47,7 +47,7 @@ export default function BraceletSection() {
         {/* Product Macro Shot */}
         <div className="bracelet-item bracelet-product">
           <img
-            src="/assets/img/product/exclusive/B6.jpeg"
+            src="/assets/img/product/Exclusive/B6.jpeg"
             alt="Bracelet macro detail"
           />
         </div>
